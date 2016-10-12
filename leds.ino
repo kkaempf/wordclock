@@ -1,20 +1,11 @@
 // actual RGB values for FastLed
 CRGB leds[NUM_LEDS];
 
+
 // current on/off state
 boolean current_leds[NUM_LEDS];
 // next on/off state
 boolean next_leds[NUM_LEDS];
-
-#define UPDATES_PER_SECOND 100
-
-void leds_set_next_word(byte *word_p) {
-  int start = *word_p++;
-  int len = *word_p;
-  for(int i = start; i < start+len; i++) {
-    next_leds[i] = true;
-  }
-}
 
 void leds_fade(uint8_t start, uint8_t count) {
   Serial.print("fade start ");
@@ -26,6 +17,14 @@ void leds_fade(uint8_t start, uint8_t count) {
   FastLED.show();
 }
 
+
+void leds_set_next_word(byte *word_p) {
+  int start = *word_p++;
+  int len = *word_p;
+  for(int i = start; i < start+len; i++) {
+    next_leds[i] = true;
+  }
+}
 
 //
 // copy next_leds to current_leds to leds by fading
