@@ -7,11 +7,10 @@ and DS1302 RTC (Rst: D6, IO: D7, CLK: D8)
 
 */
 
-#include <FastLED.h>
 #include <Time.h>
-#include <DS1302.h>
-
-#define WORDCLOCK_TEST 1
+#include "hardware.h"
+#include "leds.h"
+#include "rtc.h"
 
 void setup() {
   // Setup Serial connection for debug

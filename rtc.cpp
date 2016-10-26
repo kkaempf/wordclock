@@ -1,3 +1,6 @@
+#include <DS1302.h>
+#include "hardware.h"
+
 DS1302 rtc(RTC_RST, RTC_IO, RTC_CLK);
 
 void rtc_setup() {

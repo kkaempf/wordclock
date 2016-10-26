@@ -1,5 +1,3 @@
-#define NUM_LEDS     121
-
 /*
  *    1   2   3   4   5   6   7   8   9  10  11
  *   Neu  E   s   r   i   s   t   a   ¢   k  ab
